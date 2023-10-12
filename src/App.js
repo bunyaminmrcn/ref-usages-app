@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect, useRef } from 'react'
+
+
+import CustomInput from './CustomInput';
+
 function App() {
 
   const [input, setInput] = useState("");
@@ -21,7 +25,7 @@ function App() {
   }
   return (
     <div className="App">
-      <input ref={inputRef} type='text' value={input} onChange={e => setInput(e.target.value)} />
+      <CustomInput ref={inputRef} type='text' value={input} onChange={e => setInput(e.target.value)} />
       <button onClick={clickHandler}>Click ME!</button>
 
       <div>You entered {input}</div>
